@@ -15,9 +15,10 @@ public class Principal {
 		log.debug("Ejemplo de debug......");
 
 		try {
-			String texto = null;
-			String textoUpper = texto.toUpperCase();
-		} catch (Exception e) {
+		
+			GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
+			gestorDeArchivos.guardarArchivo("c:/test.txt", "hola!!!");
+		} catch (GestorDeArchivosException e) {
 			log.error("Hay un error general", e);
 			// TODO: handle exception
 		}
